@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<AnchorPane fx:id="patient" xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.eng.igorjovanovicbe.PatientController"
+            prefHeight="400.0" prefWidth="600.0">
+    <TableView fx:id="tableView">
+        <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+        </columnResizePolicy>
+        <columns>
+            <TableColumn text="Identifier">
+                <cellValueFactory>
+                    <PropertyValueFactory property="identifier" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn  text="Active" >
+                <cellValueFactory>
+                    <PropertyValueFactory property="active" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn  text="Name" sortable="true">
+                <cellValueFactory>
+                    <PropertyValueFactory property="name" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn  text="Surname" sortable="false" >
+                <cellValueFactory>
+                    <PropertyValueFactory property="surname" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn  text="Gender" >
+                <cellValueFactory>
+                    <PropertyValueFactory property="gender" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn  text="Birth Date" sortable="true">
+                <cellValueFactory>
+                    <PropertyValueFactory property="birthDate" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn  text="Address" sortable="false" >
+                <cellValueFactory>
+                    <PropertyValueFactory property="address" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn  text="Phone" >
+                <cellValueFactory>
+                    <PropertyValueFactory property="phone" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn  text="Email" sortable="true">
+                <cellValueFactory>
+                    <PropertyValueFactory property="email" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn  text="Deceased" sortable="false" >
+                <cellValueFactory>
+                    <PropertyValueFactory property="deceased" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn  text="Marital Status" sortable="false" >
+                <cellValueFactory>
+                    <PropertyValueFactory property="maritalStatus" />
+                </cellValueFactory>
+            </TableColumn>
+        </columns>
+    </TableView>
+</AnchorPane>
